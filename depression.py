@@ -65,15 +65,15 @@ depression_levels = {
 st.subheader("Isi kuesioner berikut untuk mengetahui tingkat depresi Anda")
 
 with st.form("depression_form"):
-    sleep = st.radio("Seberapa sering Anda merasa tidur Anda terganggu?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
+    sleep = st.radio("Seberapa sering Anda merasa memiliki kualitas tidur yang buruk?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     appetite = st.radio("Seberapa sering Anda kehilangan nafsu makan?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     interest = st.radio("Seberapa sering Anda merasa kurang tertarik pada kegiatan yang biasanya Anda nikmati?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     fatigue = st.radio("Seberapa sering Anda merasa sangat lelah atau kehabisan energi?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     worthlessness = st.radio("Seberapa sering Anda merasa tidak berharga?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     concentration = st.radio("Seberapa sering Anda merasa kesulitan berkonsentrasi?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
-    agitation = st.radio("Seberapa sering Anda merasa gelisah atau mudah tersinggung?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
+    agitation = st.radio("Seberapa sering Anda merasa mudah tersinggung?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     suicidal = st.radio("Seberapa sering Anda berpikir untuk menyakiti diri sendiri?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
-    sleep_disturbance = st.radio("Seberapa sering Anda mengalami gangguan tidur?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
+    sleep_disturbance = st.radio("Seberapa sering Anda mengalami gangguan saat tidur?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     aggression = st.radio("Seberapa sering Anda merasa agresif atau mudah marah?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     panic = st.radio("Seberapa sering Anda mengalami serangan panik?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
     hopelessness = st.radio("Seberapa sering Anda merasa kehilangan harapan?", ["Tidak Pernah", "Jarang", "Kadang-kadang", "Sering", "Selalu"])
