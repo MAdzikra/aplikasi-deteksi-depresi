@@ -5,10 +5,16 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
+# Mengatur judul dan tata letak
+st.set_page_config(
+    page_title="Aplikasi Deteksi Tingkat Depresi",
+    layout="centered"
+)
+
 # Membaca dataset dari file CSV
 @st.cache_data
 def load_data():
-    df = pd.read_csv('Deepression.csv')  # Ganti dengan path file CSV Anda
+    df = pd.read_csv('Deepression.csv')
     return df
 
 # Memuat data
@@ -26,12 +32,23 @@ y = df["Depression State"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Membuat model KNN
-knn = KNeighborsClassifier(n_neighbors=3)
+knn = KNeighborsClassifier(n_neighbors=2, weights='distance')
 knn.fit(X_train, y_train)
 
 # Menilai akurasi
 y_pred = knn.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
+
+# Judul halaman
+st.title("Aplikasi Deteksi Tingkat Depresi")
+st.write("""
+Selamat datang di aplikasi untuk mendeteksi tingkat depresi.
+
+### Anggota Kelompok:
+- **140810220044** - Candra Wibawa
+- **140810220046** - Muhammad Adzikra Dhiya Alfauzan
+- **140810220052** - Ivan Arsy Himawan
+""")
 
 # Menampilkan akurasi
 st.write(f"Akurasi model KNN: {accuracy * 100:.2f}%")
