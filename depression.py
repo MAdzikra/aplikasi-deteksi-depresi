@@ -95,16 +95,6 @@ knn.fit(X_train, y_train)
 
 y_pred = knn.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
-import streamlit as st
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
-
-# Existing page configuration and CSS remain the same...
-
-# Rest of the code remains the same until the main function
 
 def main():
     st.markdown('<div class="main-container">', unsafe_allow_html=True)
